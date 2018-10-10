@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
@@ -9,6 +9,7 @@ export class HomePage {
   //number, string, boolean, any, array
     
   num : number;
+  cos : object;
   mayormenor : string = "...";
   numsecreto : number = this.numAleatorio(0,10);
   constructor(public navCtrl: NavController) {
@@ -27,5 +28,11 @@ export class HomePage {
         this.mayormenor = "Es mayor";
       } else this.mayormenor = "";
     }
+  }
+
+  reinicio{
+    this.num = null;
+    this.mayormenor = "...";
+    this.numsecreto = this.numAleatorio(1,10);
   }
 }
