@@ -30,7 +30,7 @@ export class HomePage {
     }
   }
 
-  reinicio{
+  reinicio(){
     this.num = null;
     this.mayormenor = "...";
     this.numsecreto = this.numAleatorio(1,10);
